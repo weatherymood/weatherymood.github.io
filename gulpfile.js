@@ -17,7 +17,7 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     plumber     = require('gulp-plumber'),
     notify      = require("gulp-notify"),
-    deploy      = require('gulp-gh-pages'),
+    ghPages      = require('gulp-gh-pages'),
     del         = require('del'),
     gulpif      = require('gulp-if'),
     browserSync = require('browser-sync').create();
@@ -157,9 +157,9 @@ gulp.task('default', ['serve']);
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', ['prod'], function () {
+gulp.task('deploy', function () {
   return gulp.src("./web/**/*")
-    .pipe(deploy({
+    .pipe(ghPages({
         branch: 'master'
     }))
 });
