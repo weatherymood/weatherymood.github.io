@@ -1,0 +1,1 @@
+!function(n){var i=function(){function n(){console.log("module 1 init")}return{init:n}}();i.init()}(window),function(n){var i=function(){function n(){console.log("module 2 init")}return{init:n}}();i.init()}(window);
