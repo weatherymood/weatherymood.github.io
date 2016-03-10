@@ -1,9 +1,43 @@
 (function(exports) {
 
-    var module_1 = (function() {
+
+    var videoResize = (function() {
+
+        var mediaAspect = mediaAspect || 16/9;
+        var windowW = $(window).width();
+        var windowH = $(window).height();
+        var windowAspect = windowW/windowH;
+
+        var $el =  $('.fullscreen-bg');
 
         function init() {
-            console.log('module 1 init')
+            _resize();
+            $(window).on('resize', function (argument) {
+                _resize();
+            })
+        }
+
+        function _resize() {
+
+            windowW = $(window).width();
+            windowH = $(window).height();
+            windowAspect = windowW/windowH;
+
+            if (windowAspect < mediaAspect) {
+                $el.css({
+                    width: windowH*mediaAspect,
+                    height: windowH,
+                    top: 0,
+                    left: -(windowH*mediaAspect-windowW)/2
+                });
+            } else {
+                $el.css({
+                    width: windowW,
+                    height: windowW/mediaAspect,
+                    top: -(windowW/mediaAspect-windowH)/2,
+                    left: 0
+                });
+            }
         }
 
         return {
@@ -11,22 +45,6 @@
         };
     }());
 
-    module_1.init();
-
-}(window));
-(function(exports) {
-
-    var module_2 = (function() {
-
-        function init() {
-            console.log('module 2 init')
-        }
-
-        return {
-            init: init
-        };
-    }());
-
-    module_2.init();
+    videoResize.init();
 
 }(window));
