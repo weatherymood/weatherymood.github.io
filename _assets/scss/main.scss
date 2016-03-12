@@ -107,3 +107,12 @@ $onlydesktop: "only screen and (min-width: 1024px and max-width: 1439px)";
     margin: 0 20px;
   }
 }
+
+.share-box{
+  display: block;
+  display: flex;
+  > div{
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
