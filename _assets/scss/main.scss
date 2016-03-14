@@ -1,9 +1,3 @@
-@import "reset";
-@import "base";
-
-@import "fullscreen-bg";
-@import "logo";
-
 // breakpoints
 $phone: "screen and (min-width: 480px)";
 $tablet: "screen and (min-width: 768px)";
@@ -13,113 +7,12 @@ $onlyMobile: "only screen and (max-width: 767px)";
 $onlyTablet: "only screen and (min-width: 768px and max-width: 1023px)";
 $onlydesktop: "only screen and (min-width: 1024px and max-width: 1439px)";
 
-.content{
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  right: 0;
-  box-sizing: border-box;
-  flex-direction: column;
-  @media #{$tablet} {
-    justify-content: center;
-    align-items: center;
-  }
-}
+@import "reset";
+@import "base";
 
-.content-wrapper{
-  color: #fff;
-  font-weight: 300;
-  margin: 30% 5%;
-  width: 90%;
-  @media #{$tablet} {
-    margin: 5%;
-    width: 38%;
-  }
-  h2{
-    font-weight: 600;
-    line-height: 1.2;
-    font-size: 23px;
-    margin: 30px 0;
-  }
-  h3{
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  .cta{
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    padding: 15px 50px;
-    margin-top: 30px;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.7);
-    border-radius: 10px;
-    font-size: 16px;
-    background: rgba(255,255,255,0.1);
-    transition: background .2s ease-out;
-    &:hover{
-      background: rgba(255,255,255,0.2);
-    }
-    b{
-      display: block;
-      margin-bottom: 4px;
-      font-weight: 600;
-      font-size: 20px;
-    }
-  }
-}
-
-
-#footer{
-  padding: 20px;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  @media #{$tablet} {
-    position: fixed;
-  }
-  > div{
-    @media #{$tablet} {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-  a{
-    color: #fff;
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-    &:after{
-      content: "";
-      display: inline-block;
-      height: 1px;
-      width: 102%;
-      background: #fff;
-      position: absolute;
-      bottom: -2px;
-      left: -1%;
-    }
-  }
-  p{
-    color: #fff;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 11px;
-    display: inline-block;
-    margin: 20px 0;
-    @media #{$tablet} {
-      margin: 0 20px;
-    }
-  }
-}
-
-.share-box{
-  display: block;
-  display: flex;
-  > div{
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
+@import "content";
+@import "fullscreen-bg";
+@import "logo";
+@import "cta";
+@import "share-box";
+@import "header";
