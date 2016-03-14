@@ -45,6 +45,8 @@
         };
     }());
 
-    videoResize.init();
+    if (!Modernizr.touchevents){
+        videoResize.init();
+    }
 
 }(window));
