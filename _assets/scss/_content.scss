@@ -14,10 +14,12 @@
 .content-wrapper{
   color: #fff;
   font-weight: 300;
-  margin: 20px;
-  width: 90%;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
   @media #{$tablet} {
     margin: 5%;
+    padding: 0;
     width: 38%;
   }
   h2{
