@@ -49,4 +49,8 @@
         videoResize.init();
     }
 
+    $(window).on('load', function(){
+        $('.chrome').addClass('loaded')
+    })
+
 }(window));
