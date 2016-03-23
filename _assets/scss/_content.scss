@@ -6,10 +6,8 @@
   right: 0;
   box-sizing: border-box;
   flex-direction: column;
-  @media #{$tablet} {
-    justify-content: flex-end;
-    align-items: center;
-  }
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content-wrapper{
@@ -22,7 +20,7 @@
     margin: 5%;
     margin-top: 15%;
     padding: 0;
-    width: 38%;
+    width: 40%;
   }
   h2{
     font-weight: 600;
@@ -43,13 +41,14 @@
 }
 
 .chrome{
-  max-width: 1100px;
-  margin-bottom: -25%;
+  margin: 0 auto;
+  align-self: flex-end;
   @media #{$tablet} {
-    max-width: 80vw;
-    font-size: 18px;
+    width: 70vw;
+    max-width: 900px;
   }
   img{
+    display: block;
     width: 100%;
   }
 }
