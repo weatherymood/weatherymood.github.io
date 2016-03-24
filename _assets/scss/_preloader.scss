@@ -23,7 +23,7 @@
   top: 50%;
   opacity: 0;
   display: flex;
-  position: absolute;
+  position: fixed;
   align-items: center;
   justify-content: center;
   transform: translate(-50%,-50%) translateZ(0) scale(0.6);
