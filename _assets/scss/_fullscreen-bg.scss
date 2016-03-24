@@ -16,6 +16,16 @@
     left: 0;
     width: 100%;
     height: 100%;
+    &.bg-0{&:after{background: $bg0;}}
+    &.bg-1{&:after{background: $bg1;}}
+    &.bg-2{&:after{background: $bg2;}}
+    &.bg-3{&:after{background: $bg3;}} // http://uigradients.com/#MinnesotaVikings
+    &.bg-4{&:after{background: $bg4;}} // http://uigradients.com/#FreshTurboscent
+    &.bg-5{&:after{background: $bg5;}} // http://uigradients.com/#DanceToForget
+    &.bg-6{&:after{background: $bg6;}} // http://uigradients.com/#CalmDarya
+    &.bg-7{&:after{background: $bg7;}} // http://uigradients.com/#BackToEarth
+    &.bg-8{&:after{background: $bg8;}} // http://uigradients.com/#Ukraine
+    &.bg-9{&:after{background: $bg9;}} // http://uigradients.com/#EndlessRiver
     &:after, &:before{
       content: "";
       display: block;
@@ -24,7 +34,7 @@
       position: absolute;
     }
     &:after{
-      background: linear-gradient(45deg, #2DDA8A 0, #2DDA8A 21%, #11135D 100%);
+
       opacity: .8;
       z-index: 1;
     }
@@ -46,6 +56,9 @@
   }
 }
 
+.dnone{
+  display: none;
+}
 
 
 @media (min-aspect-ratio: 16/9) {
