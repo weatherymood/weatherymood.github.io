@@ -1,6 +1,7 @@
 #header{
   padding: 20px;
   box-sizing: border-box;
+  z-index: 987654321;
   @media #{$tablet} {
     top: 0;
     width: 100%;
