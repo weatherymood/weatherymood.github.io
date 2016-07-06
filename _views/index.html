@@ -113,7 +113,8 @@
 
     <script>
         function install() {
-            chrome.webstore.install('https://chrome.google.com/webstore/detail/impipmibdfkmmalbmhhmdboepmghkbkk', successCallback, failureCallback)
+            var url = 'https://chrome.google.com/webstore/detail/impipmibdfkmmalbmhhmdboepmghkbkk';
+            chrome.webstore.install(url, successCallback, failureCallback)
         }
 
         function successCallback() {
