@@ -30,6 +30,8 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="google-site-verification" content="Ja3kHRr8OenFWvHenNJKL8SPO07oQnvgCAqgbefHfq4" />
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/impipmibdfkmmalbmhhmdboepmghkbkk">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -98,12 +100,30 @@
             </div>
             <h2>Is it rainy? Cloudy? Sunny?<br>Just open a new tab and discover the magic of a great Spotify playlist!</h2>
             <h3><b>WeatheryMood</b> is a Chrome extension that lets you discover new playlists based on the current weather in your city.</h3>
+
+            <button onclick="install()" id="install-button">Add to Chrome</button>
+
             <a href="https://chrome.google.com/webstore/detail/weatherymood/impipmibdfkmmalbmhhmdboepmghkbkk" class="cta">
                 <b>Check out</b>
                 on Chrome Store
             </a>
+
         </div>
     </section>
+
+    <script>
+        function install() {
+            chrome.webstore.install('https://chrome.google.com/webstore/detail/impipmibdfkmmalbmhhmdboepmghkbkk', successCallback, failureCallback)
+        }
+
+        function successCallback() {
+            console.log('ol')
+        }
+
+        function failureCallback() {
+            console.log('ko')
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="js/scripts.js"></script>
