@@ -158,6 +158,7 @@ gulp.task('default', ['serve']);
  * Push build to gh-pages
  */
 gulp.task('deploy', function () {
+  gulp.src('CNAME').pipe(gulp.dest('web'));
   return gulp.src("./web/**/*")
     .pipe(ghPages({
         branch: 'master'
