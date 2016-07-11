@@ -57,7 +57,7 @@ gulp.task('styles', function() {
 **/
 gulp.task('scripts', function() {
     del.sync('web/js');
-    gulp.src(['_assets/js/mediaresize.js', '_assets/js/preloader.js', '_assets/js/main.js'])
+    gulp.src(['_assets/js/preloader.js', '_assets/js/main.js'])
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(concat('scripts.js'))
         .pipe(gulpif(prod, uglify()))

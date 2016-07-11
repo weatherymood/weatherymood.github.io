@@ -6,13 +6,12 @@
         'https://source.unsplash.com/1600x900/?clear,sky'
     ]
     setTimeout(function () {
-        $('.fullscreen-bg').append(
-            '<div class="full-bg" style="background: url('+list[Math.floor(Math.random()*list.length)]+'); background-size: cover"></div>'
-        )
+        // $('.fullscreen-bg').append(
+        //     '<div class="full-bg" style="background: url('+list[Math.floor(Math.random()*list.length)]+'); background-size: cover"></div>'
+        // )
         PRELOADER.show()
     }, 0)
     $(window).on('load', function(){
         PRELOADER.remove()
-        // MEDIARESIZE.init();
     })
 }(jQuery, window));
